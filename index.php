@@ -1,74 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php
+include "./include/head.php"
+?>
+
 <body>
-    
 
-    <?php
-        echo "hello world"; 
-    ?>
+    <main>
 
-    <?php
-
-    // scaler types  (contains one value)
-
-        $string = ""; 
-        $int = 0;
-        $float = 0;
-        $bool = false;
-
-        $array = [] ;
-        $object = null
-
-    ?>
-
-    <?php
-        $name = "salman";
-        $age = 24;
-    ?>
-
-    <p>My name is <?php echo $name; ?> & my age is <?php echo $age; ?> </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="./include/formhandler.php" method="post">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-7">
+                                <label for="firstname" class="form-label">Name</label>
+                                <input type="text" class="form-control form-control-color mb-3 w-100" name="first_name" id="firstname">
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <label for="lastname" class="form-label">Last Name</label>
+                                <input type="text" class="form-control form-control-color mb-3 w-100" id="lastname" name="last_name">
+                            </div>
 
 
-    <?php
+                            <div class="col-12 col-lg-7">
+                                <label for="lastname" class="form-label">Last Name</label>
+                                <select class="form-select" aria-label="Default select example" name="favourite_color">
+                                    <option selected>Select Color</option>
+                                    <option value="red">red</option>
+                                    <option value="green">green</option>
+                                    <option value="blue">blue</option>
+                                </select>
+                            </div>
 
-        // SUPERGLOBLA VARIABLE
-
-        // echo $_SERVER[""];
-        // echo $_GET[""];
-        // echo $_POST[""];
-        // echo $_REQUEST[""];
-        // echo $_FILES[""];
-        // echo $_COOKIE[""];
-        // echo $_SESSION[""];
-        // echo $_ENV[""];
-    ?>
-
-
-    <?php 
-
-        echo $_SERVER["DOCUMENT_ROOT"];
-        echo "<br>";
-        echo $_SERVER["PHP_SELF"];
-        echo "<br>";
-        echo $_SERVER["SERVER_NAME"];
-        echo "<br>";
-        echo $_SERVER["REQUEST_METHOD"];
-        echo "<br>";
+                            <div class="col-12">
+                                <div class="text-center mt-3">
+                                    <button type="submit" class="btn btn-primary">Button</button>
+                                </div>
+                            </div>
+                        </div>
 
 
-    ?>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-
-    <?php
-        echo $_GET["name"];
-        echo "<br>";
-        echo $_GET["age"];
-    ?>
+    </main>
 
 </body>
+
 </html>
